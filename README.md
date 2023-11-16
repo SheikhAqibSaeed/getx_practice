@@ -1,4 +1,4 @@
-# tiktok_app
+# getx_practice
 
 A new Flutter project.
 
