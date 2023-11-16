@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tiktok_app/screens/screeen_one.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -65,8 +66,17 @@ class HomeScreen extends StatelessWidget {
                 ));
               },
             ),
-          )
+          ),
+          TextButton(onPressed: (){
+            // Get.to(ScreenOne());
+            // Get.to(ScreenOne(name: 'Aqib Saeed'));
+            Get.toNamed('/screenOne', arguments: [
+              'Aqib Saeed',
+              'Asif'
+            ]);
+          }, child: Text('Go to Screen One'))
         ],
+
       ),
       // floatingActionButton: FloatingActionButton(onPressed: (){
       //   Get.snackbar('Hello world', 'This is Getx app!',
@@ -84,6 +94,7 @@ class HomeScreen extends StatelessWidget {
       // },
       //   backgroundColor: Colors.green,
       // ),
+
     );
   }
 }

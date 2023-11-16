@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tiktok_app/screens/home_screen.dart';
+import 'package:tiktok_app/screens/screeen_one.dart';
+import 'package:tiktok_app/screens/screeen_two.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: HomeScreen(),
+      getPages: [
+        GetPage(name: '/', page: ()=> HomeScreen()),
+        GetPage(name: '/screenOne' , page: ()=> ScreenOne()),
+        GetPage(name: '/screenTwo', page: ()=> ScreenTwo()),
+      ],
     );
   }
 }
